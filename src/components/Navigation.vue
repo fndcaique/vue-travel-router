@@ -13,7 +13,7 @@
         <router-link :to="{
           name: 'DestinationDetails',
           params: {
-            id: destination.id
+            slug: destination.slug
           }
         }">{{destination.name}}</router-link>
       </li>
