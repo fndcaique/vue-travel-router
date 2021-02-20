@@ -1,6 +1,5 @@
 <template>
   <section>
-    <h1>Experience</h1>
     <h2>{{experience.name}}</h2>
     <div class="experience-details">
       <img

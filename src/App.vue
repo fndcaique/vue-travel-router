@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navigation />
-    <transition name="slide" mode="out-in">
+    <transition name="fade" mode="out-in">
       <router-view :key="$route.path" />
     </transition>
   </div>
@@ -17,12 +17,17 @@ export default {
 };
 </script>
 <style>
+body{
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  padding: 0 10px;
 }
 .slide-enter-active,
 .slide-leave-active {

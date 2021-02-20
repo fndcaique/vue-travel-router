@@ -1,6 +1,6 @@
 <template>
-  <nav id="nav">
-    <p class="logo">The Vue School Travel App</p>
+  <nav class="nav">
+    <router-link to="/" class="logo">The Vue School Travel App</router-link>
     <ul class="nav-links">
       <li class="link">
         <router-link to="/">Home</router-link> |
@@ -33,17 +33,25 @@ export default {
 </script>
 <style scoped>
 
-#nav {
-  padding: 30px;
+.nav {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color:white;
+  border-bottom: 1px solid grey;
+  /* padding: 20px; */
+  margin-bottom: 10px;
+  z-index: 1;
 }
 
-#nav a {
+.nav a {
   font-weight: bold;
   color: #2c3e50;
   padding: 0 10px;
 }
 
-#nav a.router-link-exact-active {
+.nav a.router-link-exact-active {
   color: #42b983;
 }
 
@@ -56,9 +64,11 @@ export default {
   list-style: none;
 }
 
-.logo {
-  font-size: 20px;
+a.logo {
   color: #42b983;
+  font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
 }
 </style>

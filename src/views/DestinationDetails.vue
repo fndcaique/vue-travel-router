@@ -9,8 +9,8 @@
   </div>
   </section>
   <section class="experiences">
-    <h2>To experience in {{ destination.name }}</h2>
-    <div class="cards">
+    <h2>Top experience in {{ destination.name }}</h2>
+    <div class="cards" id="experience">
       <div
         class="card"
         v-for="experience in destination.experiences"
@@ -21,7 +21,8 @@
             name: 'ExperienceDetails',
             params: {
               experienceSlug: experience.slug
-            }
+            },
+            hash: '#experience'
           }"
         >
           <img :src="require(`@/assets/${experience.image}`)" :alt="experience.name">
