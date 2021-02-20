@@ -1,6 +1,8 @@
 <template>
   <nav class="nav">
-    <router-link to="/" class="logo">The Vue School Travel App</router-link>
+    <router-link to="/" class="logo">
+      The Vue School Travel App
+    </router-link>
     <ul class="nav-links">
       <li class="link">
         <router-link to="/">Home</router-link> |
@@ -15,7 +17,13 @@
           params: {
             slug: destination.slug
           }
-        }">{{destination.name}}</router-link>
+        }"
+        >
+          {{ destination.name }}
+        </router-link>
+      </li>
+      <li class="link">
+        <router-link to="/user">Dashboard</router-link>
       </li>
     </ul>
   </nav>
